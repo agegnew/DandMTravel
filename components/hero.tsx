@@ -59,38 +59,11 @@ export default function Hero() {
                         <ArrowRight className="h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-base border-white/40 text-white backdrop-blur-sm hover:bg-white/10 shadow-lg shadow-black/5 transition-all">
+                    <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-base border-2 border-red-100 bg-white/10 text-red-100 backdrop-blur-sm hover:bg-white/10 hover:text-white hover:border-white shadow-lg shadow-black/5 transition-all">
                       <Link href="/about">
                         About D&M Travel
                       </Link>
                     </Button>
-                  </div>
-                </FadeIn>
-                
-                <FadeIn direction="up" delay={0.3} duration={0.7} className="mt-10">
-                  <div className="flex items-center gap-4">
-                    <div className="flex -space-x-4">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-red-700 flex items-center justify-center text-white text-xs font-bold shadow-md">
-                          {/* In a real implementation, these would be actual customer images */}
-                          <Image
-                            src={`/placeholder-user.jpg`}
-                            alt={`Customer ${i}`}
-                            width={40}
-                            height={40}
-                            className="object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <div>
-                      <div className="flex items-center">
-                        {[1, 2, 3, 4, 5].map((i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 drop-shadow-md" />
-                        ))}
-                      </div>
-                      <p className="text-white/90 text-sm mt-1 drop-shadow">Trusted by 10,000+ travelers</p>
-                    </div>
                   </div>
                 </FadeIn>
               </div>

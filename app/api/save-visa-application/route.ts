@@ -52,7 +52,7 @@ export async function POST(request: Request) {
       passportExpiry,
       travelDateFrom || 'N/A',
       travelDateTo || 'N/A',
-      uploadedFiles ? JSON.stringify(uploadedFiles) : 'N/A',
+      uploadedFiles ? uploadedFiles.length.toString() : '0', // Number of files uploaded
       additionalNotes || 'N/A',
     ];
 
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     const sheets = await getGoogleSheetsClient();
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
-      range: 'visa!A:O', // Sheet named "visa" with columns A through O
+      range: 'Visa!A:O', // Sheet named "visa" with columns A through O
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [row],

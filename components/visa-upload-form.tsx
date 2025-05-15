@@ -463,6 +463,7 @@ export default function VisaUploadForm() {
                     <p className="pl-1">or drag and drop</p>
                   </div>
                   <p className="text-xs text-gray-500">PDF, PNG, JPG up to 10MB</p>
+                  <p className="text-xs text-gray-500 italic mt-1">Note: This is a demo implementation. File metadata will be saved, but files are not actually uploaded to a server.</p>
                 </div>
               </div>
             </div>

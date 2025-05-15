@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
 
       {/* Redesigned Hot Deals Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-red-50/50 to-white">
+      <section className="py-16 md:py-24 pb-24 md:pb-32 relative overflow-hidden bg-gradient-to-b from-red-50/50 to-white">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-to-br from-red-200 to-red-100 blur-3xl"></div>
@@ -26,11 +26,26 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16">
             <FadeIn direction="up" className="flex flex-col items-center md:items-start text-center md:text-left max-w-2xl">
-              <div className="inline-flex items-center justify-center p-2 bg-white shadow-md border border-red-100 rounded-full mb-4">
-                <Tag className="h-5 w-5 text-red-600" />
+              <div className="flex items-center gap-5 mb-6">
+                <div className="relative flex-shrink-0">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500/90 via-red-600 to-red-700 shadow-xl rounded-lg overflow-hidden transform rotate-6 group hover:rotate-0 transition-all duration-300">
+                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-white rounded-full"></div>
+                    <div className="absolute inset-0 bg-white opacity-10 group-hover:opacity-0 transition-opacity"></div>
+                    
+                    {/* Modern discount tag design */}
+                    <div className="relative z-10 text-white flex flex-col items-center justify-center">
+                      <span className="font-bold text-xl tracking-tight">50%</span>
+                      <span className="text-xs font-medium -mt-1 tracking-wider">OFF</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                  Exclusive Travel Deals
+                </h2>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">Exclusive Travel Deals</h2>
-              <p className="text-gray-600 text-base md:text-lg">
+              
+              <p className="text-gray-600 text-base md:text-lg max-w-xl">
                 Limited-time offers on flights and packages between Ethiopia and UAE with incredible savings
               </p>
             </FadeIn>
@@ -64,9 +79,9 @@ export default function Home() {
                 <PromoCarousel />
               </Suspense>
               
-              <div className="md:absolute md:-bottom-8 md:left-1/2 md:transform md:-translate-x-1/2 bg-white shadow-xl rounded-xl p-4 border border-red-100 mt-6 md:mt-0 flex flex-wrap justify-center gap-4 md:gap-8 max-w-3xl mx-auto">
+              <div className="md:absolute md:-bottom-14 md:left-1/2 md:transform md:-translate-x-1/2 bg-white shadow-xl rounded-xl p-5 border border-red-100 mt-6 md:mt-0 flex flex-wrap justify-center gap-4 md:gap-10 max-w-3xl mx-auto z-10">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-red-50 rounded-full">
+                  <div className="p-2.5 bg-red-50 rounded-full">
                     <Clock className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
@@ -75,7 +90,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-red-50 rounded-full">
+                  <div className="p-2.5 bg-red-50 rounded-full">
                     <Plane className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
@@ -84,7 +99,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-red-50 rounded-full">
+                  <div className="p-2.5 bg-red-50 rounded-full">
                     <CircleUser className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
